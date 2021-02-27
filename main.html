@@ -15,44 +15,46 @@
 </head>
 
 <body>
-    <form id="searchForm">
-        <h1>Επιλογή Φαγητού</h1>
-        <div>
-            <label for="meet"> Με κρέας </label>
-            <input type="checkbox" name="" id="meet">
-            &nbsp &nbsp &nbsp &nbsp
-            <label for="nomeet"> Χωρίς κρέας </label>
-            <input type="checkbox" name="" id="nomeet"><br>
-        </div>
-        <div>
-            <label for="grantparents">Παππούδες</label>
-            <input type="checkbox" name="" id="grantparents"> <br>
-        </div>
-        <div>
+    <div class="center-box">
+        <form id="searchForm">
+            <h1>Επιλογή Φαγητού</h1>
+            <div class="form-line">
+                <label for="meet"> Με κρέας </label>
+                <input type="checkbox" name="" id="meet">
+                <!-- &nbsp &nbsp &nbsp &nbsp -->
+                <label for="nomeet"> Χωρίς κρέας </label>
+                <input type="checkbox" name="" id="nomeet">
+            </div>
+            <div class="form-line">
+                <label for="grantparents">Παππούδες</label>
+                <input type="checkbox" name="" id="grantparents">
 
-            <label for="joanna">Ιωάννα</label>
-            <input type="checkbox" name="" id="joanna"> <br>
-        </div>
+                <label for="joanna">Ιωάννα</label>
+                <input type="checkbox" name="" id="joanna">
+            </div>
 
-        <div>
-            <label for="soups">Σούπες</label>
-            <input type="checkbox" name="" id="soups">
-            &nbsp &nbsp &nbsp &nbsp
+            <div class="form-line">
+                <label for="soups">Σούπες</label>
+                <input type="checkbox" name="" id="soups">
+                <!-- &nbsp &nbsp &nbsp &nbsp -->
 
-            <label for="seafood">Θαλασσινά</label>
-            <input type="checkbox" name="" id="seafood">
-        </div>
-        <div>
-            <label for="weekend">Προτάσεις σαββατοκύριακου</label>
-            <input type="checkbox" name="" id="weekend"> <br>
-        </div>
+                <label for="seafood">Θαλασσινά</label>
+                <input type="checkbox" name="" id="seafood">
+            </div>
 
-        <button type="submit">Εύρεση</button>
-        <button type="reset">Εκκαθάριση</button>
+            <div class="form-line">
+                <label for="weekend">Προτάσεις σαββατοκύριακου</label>
+                <input type="checkbox" name="" id="weekend">
+            </div>
+            <div class="">
+                <button type="submit">Εύρεση</button>
+                <button type="reset">Εκκαθάριση</button>
+            </div>
 
 
+        </form>
+    </div>
 
-    </form>
     <div id="selectedFood">
 
         <ol>
