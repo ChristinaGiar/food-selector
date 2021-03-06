@@ -1,5 +1,5 @@
 body{
-    margin-top: 0px;
+    margin-top: 0rem;
     font-family: 'Roboto', sans-serif;
     color: rgb(34, 34, 34);
     background-color: rgb(238, 238, 238);
@@ -53,17 +53,15 @@ body{
 
 #searchForm button {
     font-size: 1rem;
-    border: 1.5px solid #8a2be2;
     /* border: none; */
     /* height: 2.3rem; */
     border-radius: 2px;
-    background-color: #8a2be2;
-    color: #ffffff;
     padding: 0.5rem 1rem;
     margin: 1rem 0rem 0rem;
     cursor: pointer;
     transition: background 0.3s;
     box-sizing: border-box;
+    
 }
 
 #searchForm button:focus {
@@ -71,54 +69,90 @@ body{
 }
 
 #searchForm button:hover {
-        background-color: #6318a8;
-        box-shadow: 0px 0px 3px 0.1px #8a2be2;
+    background-color: #6318a8;
+}
 
+#searchForm button[type="submit"] {
+    background-color: #8a2be2;
+    border: 1.5px solid #8a2be2;
+    color: #ffffff;
 }
 
 #searchForm button[type="reset"] {
     background: none;
     color: rgb(34, 34, 34);
-    /* width: initial; */
     border: 1.5px solid #dbdbdb;
 }
+
+#searchForm button[type="submit"]:hover {
+    box-shadow: 0px 0px 3px 0.1px #8a2be2;
+} 
 
 #searchForm button[type="reset"]:hover {
     box-shadow: 0px 0px 8px -4px #8a2be2;
 
 }
 
-#selectedFood {
-    position: relative;
-    box-sizing: border-box;
+.open-popup {
+    display: none;
+}
+
+.popup {
+    position: fixed;
+    opacity: 0;
+    visibility: hidden;
+    height: 100vh;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, .5);
+}
+ 
+.popup:target{
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup:target .popup-content {
+    transform: translate(50%, 50%), scale(4);
+}
+
+.popup-content {
+    width: 40%;
+    background-color: white;
+    padding: 6rem 6rem;
     border: 1px solid rgb(36, 112, 173);
-    height: auto;
-    margin: 3rem 10rem 0rem;
-    padding: 2rem 0rem;
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, .2);
+    border-radius: 3px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all .3s;
 }
 
-li {
-    /* position: relative; */
-    /* display: block; */
-    /* max-width: 30%; */
-    /* text-align: center; */
-    list-style-position:inside;
-    /* list-style: none; */
-    /* display: inline-block; */
-    /* height: auto; */
 
-
+.close:link,
+.close:visited {
+    position: absolute;     
+    top: 2.5rem;
+    right: 2.5rem;
+    font-size: 2.5rem;
+    text-decoration: none;
+    display: inline-block;
+    transition: all .2s;
+    line-height: 1rem;  
 }
-ol {
-    /* position: relative;
-  display: inline-block;
-  height: auto; */
-    text-align: center;
-    /* -moz-column-count: 2;
-    -moz-column-gap: 20px;
-    -webkit-column-count: 4;
-    -webkit-column-gap: 20px; */
+
+.popup li {
+    list-style-position: inside;
+}
+
+.popup ol {
+    -moz-column-count: 2;
+    -moz-column-gap-: 20px;
+    -webkit-column-count: 2;
+    -webkit-column-gap: 20px;
     column-count: 2;
-    /* column-gap: 2px; */
-
+    column-gap: 2px;
 }
