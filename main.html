@@ -6,9 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Find the menu</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="app.css">
@@ -18,47 +15,53 @@
     <div class="center-box">
         <form id="searchForm">
             <h1>Επιλογή Φαγητού</h1>
+
             <div class="form-line">
                 <label for="meet"> Με κρέας </label>
-                <input type="checkbox" name="" id="meet">
-                <!-- &nbsp &nbsp &nbsp &nbsp -->
+                <input type="checkbox" name="checkbox" id="meet">
+
                 <label for="nomeet"> Χωρίς κρέας </label>
-                <input type="checkbox" name="" id="nomeet">
+                <input type="checkbox" name="checkbox" id="nomeet">
             </div>
+
             <div class="form-line">
                 <label for="grantparents">Παππούδες</label>
-                <input type="checkbox" name="" id="grantparents">
+                <input type="checkbox" name="checkbox" id="grantparents">
 
                 <label for="joanna">Ιωάννα</label>
-                <input type="checkbox" name="" id="joanna">
+                <input type="checkbox" name="checkbox" id="joanna">
             </div>
 
             <div class="form-line">
                 <label for="soups">Σούπες</label>
-                <input type="checkbox" name="" id="soups">
-                <!-- &nbsp &nbsp &nbsp &nbsp -->
+                <input type="checkbox" name="checkbox" id="soups">
 
                 <label for="seafood">Θαλασσινά</label>
-                <input type="checkbox" name="" id="seafood">
+                <input type="checkbox" name="checkbox" id="seafood">
             </div>
 
             <div class="form-line">
                 <label for="weekend">Προτάσεις σαββατοκύριακου</label>
-                <input type="checkbox" name="" id="weekend">
+                <input type="checkbox" name="checkbox" id="weekend">
             </div>
             <div class="">
                 <button type="submit">Εύρεση</button>
                 <button type="reset">Εκκαθάριση</button>
+                <a href="#popup" class="open-popup">&nbsp;</a>
+
             </div>
 
 
         </form>
     </div>
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <a href="#searchForm" class="close">&times;</a>
 
-    <div id="selectedFood">
+            <div class="selectedFood">
 
-        <ol>
-            <!-- <li>ferfrf</li>
+                <ol>
+                    <!-- <li>ferfrf</li>
             <li>ferfrf</li>
             <li>ferfrf</li>
             <li>ferfrf</li>
@@ -79,7 +82,7 @@
             <li>ferfrf</li>
             <li>ferfrf</li> -->
 
-            <!-- <li>ferfrf</li>
+                    <!-- <li>ferfrf</li>
             <li>ferfrf</li>
             <li>ferfrf</li>
             <li>ferfrf</li>
@@ -100,7 +103,9 @@
             <li>ferfrf</li>
             <li>ferfrf</li> -->
 
-        </ol>
+                </ol>
+            </div>
+        </div>
     </div>
     <script src="app.js"></script>
 </body>
