@@ -47,6 +47,14 @@ body{
     font-size: 1.2rem;
 }
 
+#searchForm h2 {
+    /* margin-top: 0%; */
+    font-weight: 300;
+    font-size: 1rem;
+    display: block;
+    border-bottom: 1px solid gray;
+}
+
 #searchForm div {
     margin: .8rem 0rem;
 }
@@ -106,6 +114,8 @@ body{
     left: 0;
     top: 0;
     background-color: rgba(0, 0, 0, .5);
+    overflow-y: scroll;
+
 }
  
 .popup:target{
@@ -129,6 +139,8 @@ body{
     left: 50%;
     transform: translate(-50%, -50%);
     transition: all .3s;
+    overflow-y: scroll;
+
 }
 
 
@@ -155,4 +167,23 @@ body{
     -webkit-column-gap: 20px;
     column-count: 2;
     column-gap: 2px;
+}
+
+
+@media (max-width: 56.25em) { 
+    .popup-content {
+        width: 100%;
+        background-color: white;
+        padding: 1rem 1rem;
+        border: 1px solid rgb(36, 112, 173);
+        box-shadow: 0 2rem 4rem rgba(0, 0, 0, .2);
+        border-radius: 3px;
+        position: relative;
+        overflow-y: scroll;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: all .3s;
+
+    }
 }
